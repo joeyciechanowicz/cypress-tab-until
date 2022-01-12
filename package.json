@@ -1,6 +1,6 @@
 {
   "name": "cypress-tab-until",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cypress keyboard accessibility tests",
   "files": [
     "dist",
