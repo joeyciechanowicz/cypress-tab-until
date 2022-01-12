@@ -1,0 +1,29 @@
+
+   
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Cypress keyboard test</title>
+	</head>
+	<body>
+        <h1 tabindex="0">Tabable header</h1>
+
+        <a href="#other-1">Link 1</a>
+        <a href="#other-2">Link 2</a>
+
+        <br/>
+
+		<label for="username">Username</label>
+        <input type="text" id="username" />
+        <br/>
+
+
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+        <br/>
+
+        <button type="submit" aria-label="other login text">Login</button>
+
+        This next link should break accessibility <a href="#non-tabable" tabindex="-1">Non-tabable link</a>
+	</body>
+</html>

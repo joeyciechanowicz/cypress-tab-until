@@ -1,0 +1,41 @@
+{
+  "name": "tab-until",
+  "version": "1.0.0",
+  "description": "Cypress keyboard accessibility tests",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run test:e2e:ci",
+    "prepublishOnly": "npm run build",
+    "start": "http-server -p 8080 test",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run --browser chrome --headless",
+    "test:e2e": "start-server-and-test start 8080 cypress",
+    "test:e2e:ci": "start-server-and-test start 8080 cypress:headless"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyciechanowicz/tab-until.git"
+  },
+  "keywords": [],
+  "author": "Joey Ciechanowicz <https://github.com/joeyciechanowicz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joeyciechanowicz/tab-until/issues"
+  },
+  "homepage": "https://github.com/joeyciechanowicz/tab-until#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "cypress": "^9.2.0",
+    "http-server": "^14.0.0",
+    "start-server-and-test": "^1.14.0",
+    "typescript": "^4.5.4"
+  },
+  "peerDependencies": {
+    "cypress": "^9.2.0"
+  }
+}
