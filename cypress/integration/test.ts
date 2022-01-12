@@ -1,6 +1,6 @@
 describe('tabUntil', () => {
   before(() => {
-    cy.enableAccessibility();
+    // cy.enableAccessibility();
   });
 
   beforeEach(() => {
@@ -8,7 +8,7 @@ describe('tabUntil', () => {
   });
 
   after(() => {
-    cy.disableAccessibility();
+    // cy.disableAccessibility();
   });
 
   it('tabs through', () => {

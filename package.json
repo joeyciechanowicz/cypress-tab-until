@@ -1,5 +1,5 @@
 {
-  "name": "tab-until",
+  "name": "cypress-tab-until",
   "version": "1.0.0",
   "description": "Cypress keyboard accessibility tests",
   "files": [
