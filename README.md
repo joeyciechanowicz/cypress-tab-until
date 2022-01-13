@@ -21,8 +21,6 @@ import 'cypress-tab-until';
 You can then start writing tests that just use the keyboard
 
 ```js
-cy.enableAccessibility(); // must be run once, needed to retrieve the accessibility tree
-
 cy.tabUntil({ accessibleTextIs: 'Username' });
 cy.focused().type('some-username');
 
@@ -30,8 +28,6 @@ cy.tabUntil({accessibleTextIs: 'Password'}});
 cy.focused().type('some-password');
 
 cy.tabUntil({accessibleTextIs: 'Something up the page', direction: 'backwards'});
-
-cy.disableAccessibility(); // must be run once, stops tracking accessibility
 ```
 
 ### Accessible text

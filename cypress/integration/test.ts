@@ -1,19 +1,9 @@
 describe('tabUntil', () => {
-  before(() => {
-    // cy.enableAccessibility();
-  });
-
   beforeEach(() => {
     cy.visit('/');
   });
 
-  after(() => {
-    // cy.disableAccessibility();
-  });
-
   it('tabs through', () => {
-    cy.focusBody();
-
     cy.tabUntil({ accessibleTextIs: 'Password' });
     cy.focused().should('have.id', 'password');
     cy.focused().type('a password');

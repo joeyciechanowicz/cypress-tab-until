@@ -6,8 +6,6 @@ declare global {
     interface Chainable {
       tabUntil: typeof tabUntil;
       focusBody: typeof focusBody;
-      enableAccessibility: typeof enableAccessibility;
-      disableAccessibility: typeof disableAccessibility;
     }
   }
 }
@@ -120,15 +118,5 @@ function focusBody() {
   });
 }
 
-function enableAccessibility() {
-  return fireCdpCommand('Accessibility.enable', {});
-}
-
-function disableAccessibility() {
-  return fireCdpCommand('Accessibility.disable', {});
-}
-
 Cypress.Commands.add('focusBody', focusBody);
 Cypress.Commands.add('tabUntil', tabUntil);
-Cypress.Commands.add('enableAccessibility', enableAccessibility);
-Cypress.Commands.add('disableAccessibility', disableAccessibility);
